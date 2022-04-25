@@ -1,0 +1,22 @@
+namespace IJunior_Task27
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string userString;
+
+            Console.Write($"Введите строку с текстом: ");
+            userString = Console.ReadLine();
+            Console.WriteLine();
+
+            char[] separators = new char[] { ' ', '.', ',' };
+            string[] substrings = userString.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (var substring in substrings)
+            {
+                Console.WriteLine($"Substring: {substring}");
+            }
+        }
+    }
+}
